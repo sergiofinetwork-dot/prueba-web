@@ -1,55 +1,123 @@
-<body>
-  <header class="header">
-    <nav class="nav">
-      <span class="logo">Psicología</span>
-      <a href="#" class="cta">Pide tu cita</a>
-    </nav>
-  </header>
+/* Fondo general de la página */
+body {
+    background-color: #ffe6f0; /* rosa agua */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-  <main class="hero">
-    <div class="hero-text">
-      <p class="saludo">Hola,</p>
-      <h1>Me llamo Ana<br>y soy psicóloga</h1>
-      <p class="descripcion">
-        Acompaño a personas en su proceso de bienestar emocional,
-        ofreciendo un espacio seguro, cercano y profesional.
-      </p>
-      <a href="#" class="btn">Pide tu cita online</a>
-    </div>
+/* Barra de navegación */
+nav {
+    background-color: #00bfae; /* verde agua */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    <div class="hero-image">
-      <img src="foto.jpg" alt="Psicóloga en consulta">
-    </div>
-  </main>
+/* Links de navegación */
+nav a {
+    color: #009b8d; /* turquesa oscuro para destacar */
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+}
 
-  <!-- SECCIÓN DE VALORACIONES -->
-  <section class="valoraciones">
-    <h2>Valoraciones de clientes</h2>
+nav a:hover {
+    color: #00d4c1; /* turquesa más brillante al pasar el mouse */
+}
 
-    <div class="valoracion">
-      <p class="estrellas">★★★★★</p>
-      <p class="nombre">Laura</p>
-      <p class="texto">Ana me ayudó a superar momentos difíciles con mucha paciencia y comprensión.</p>
-    </div>
+/* Botón de pedir cita */
+.btn-cita {
+    background-color: #009b8d; /* turquesa destacado */
+    color: #ffffff;
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
 
-    <div class="valoracion">
-      <p class="estrellas">★★★★☆</p>
-      <p class="nombre">Carlos</p>
-      <p class="texto">Me sentí escuchado y acompañado en todo momento. Muy recomendable.</p>
-    </div>
+.btn-cita:hover {
+    background-color: #00d4c1; /* cambio al pasar mouse */
+}
 
-    <div class="valoracion">
-      <p class="estrellas">★★★★★</p>
-      <p class="nombre">Marta</p>
-      <p class="texto">Excelente profesional, me dio herramientas que realmente funcionan.</p>
-    </div>
+/* Sección principal */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
 
-  </section>
-</body>
+/* Texto principal */
+.hero-text {
+    max-width: 600px;
+}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Psicología Ana</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+.hero-text h1 {
+    color: #009b8d; /* turquesa principal */
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-text h2 {
+    color: #00d4c1; /* turquesa más claro para resaltar */
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    color: #009b8d; /* turquesa */
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Imagen de Ana */
+.hero img {
+    max-width: 400px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* ------------------ Estilo para valoraciones ------------------ */
+
+.valoraciones {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.valoraciones h2 {
+    color: #009b8d;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.valoracion {
+    border: 1px solid #00bfae;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+    background-color: #ffffff;
+    text-align: left;
+}
+
+.valoracion .estrellas {
+    color: gold;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.valoracion .nombre {
+    font-weight: bold;
+    color: #009b8d;
+    margin-bottom: 5px;
+}
+
+.valoracion .texto {
+    font-style: italic;
+    color: #333333;
+}
