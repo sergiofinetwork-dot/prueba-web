@@ -80,3 +80,44 @@ nav a:hover {
     border-radius: 10px;
     object-fit: cover;
 }
+
+/* ------------------ Estilo para valoraciones ------------------ */
+
+.valoraciones {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.valoraciones h2 {
+    color: #009b8d;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.valoracion {
+    border: 1px solid #00bfae;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+    background-color: #ffffff;
+    text-align: left;
+}
+
+.valoracion .estrellas {
+    color: gold;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.valoracion .nombre {
+    font-weight: bold;
+    color: #009b8d;
+    margin-bottom: 5px;
+}
+
+.valoracion .texto {
+    font-style: italic;
+    color: #333333;
+}
