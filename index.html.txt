@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Psicología | Acompañamiento emocional</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <h1>Psicología y acompañamiento emocional</h1>
+
+  <p>
+    Soy psicóloga y acompaño a las personas en su proceso de mejora y bienestar
+    emocional, ofreciendo un espacio seguro, confidencial y respetuoso.
+  </p>
+
+  <p>
+    El proceso terapéutico se adapta a cada persona, respetando su ritmo y sus
+    necesidades, con el objetivo de favorecer el autoconocimiento y el desarrollo
+    de recursos personales.
+  </p>
+
+  <p>
+    Si deseas más información o pedir cita, puedes ponerte en contacto conmigo.
+  </p>
+
+</body>
+</html>
