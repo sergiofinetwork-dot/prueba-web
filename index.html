@@ -1,123 +1,95 @@
-/* Fondo general de la página */
-body {
-    background-color: #ffe6f0; /* rosa agua */
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Psicología Ana</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-/* Barra de navegación */
-nav {
-    background-color: #00bfae; /* verde agua */
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="nav">
+      <span class="logo">Psicología</span>
+      <a href="#" class="cta btn-cita">Pide tu cita</a>
+    </nav>
+  </header>
 
-/* Links de navegación */
-nav a {
-    color: #009b8d; /* turquesa oscuro para destacar */
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: 500;
-}
+  <!-- SECCIÓN PRINCIPAL -->
+  <main class="hero">
+    <div class="hero-text">
+      <p class="saludo">Hola,</p>
+      <h1>Me llamo Ana<br>y soy psicóloga</h1>
+      <p class="descripcion">
+        Acompaño a personas en su proceso de bienestar emocional,
+        ofreciendo un espacio seguro, cercano y profesional.
+      </p>
+      <a href="#" class="btn btn-cita">Pide tu cita online</a>
+    </div>
 
-nav a:hover {
-    color: #00d4c1; /* turquesa más brillante al pasar el mouse */
-}
+    <div class="hero-image">
+      <img src="foto.jpg" alt="Psicóloga en consulta">
+    </div>
+  </main>
 
-/* Botón de pedir cita */
-.btn-cita {
-    background-color: #009b8d; /* turquesa destacado */
-    color: #ffffff;
-    padding: 8px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
+  <!-- ------------------ CARRUSEL DE VALORACIONES ------------------ -->
+  <section class="valoraciones-carousel">
+    <h2>Valoraciones de clientes</h2>
 
-.btn-cita:hover {
-    background-color: #00d4c1; /* cambio al pasar mouse */
-}
+    <div class="carousel-container">
+      <button class="carousel-btn prev">&#10094;</button>
 
-/* Sección principal */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-}
+      <div class="carousel-track-wrapper">
+        <div class="carousel-track">
+          <div class="valoracion">
+            <p class="estrellas">★★★★★</p>
+            <p class="nombre">Laura</p>
+            <p class="texto">Ana me ayudó a superar momentos difíciles con paciencia y comprensión.</p>
+          </div>
 
-/* Texto principal */
-.hero-text {
-    max-width: 600px;
-}
+          <div class="valoracion">
+            <p class="estrellas">★★★★☆</p>
+            <p class="nombre">Carlos</p>
+            <p class="texto">Me sentí escuchado y acompañado en todo momento. Muy recomendable.</p>
+          </div>
 
-.hero-text h1 {
-    color: #009b8d; /* turquesa principal */
-    font-size: 36px;
-    margin-bottom: 10px;
-}
+          <div class="valoracion">
+            <p class="estrellas">★★★★★</p>
+            <p class="nombre">Marta</p>
+            <p class="texto">Excelente profesional, me dio herramientas que realmente funcionan.</p>
+          </div>
 
-.hero-text h2 {
-    color: #00d4c1; /* turquesa más claro para resaltar */
-    font-size: 28px;
-    margin-bottom: 15px;
-}
+          <div class="valoracion">
+            <p class="estrellas">★★★★☆</p>
+            <p class="nombre">David</p>
+            <p class="texto">Muy cercana y profesional, totalmente recomendable.</p>
+          </div>
+        </div>
+      </div>
 
-.hero-text p {
-    color: #009b8d; /* turquesa */
-    font-size: 16px;
-    line-height: 1.6;
-}
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+  </section>
 
-/* Imagen de Ana */
-.hero img {
-    max-width: 400px;
-    border-radius: 10px;
-    object-fit: cover;
-}
+  <!-- SCRIPT DEL CARRUSEL -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const track = document.querySelector('.carousel-track');
+      const prevBtn = document.querySelector('.carousel-btn.prev');
+      const nextBtn = document.querySelector('.carousel-btn.next');
 
-/* ------------------ Estilo para valoraciones ------------------ */
+      const cardWidth = document.querySelector('.valoracion').offsetWidth + 20; // gap
 
-.valoraciones {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    text-align: center;
-}
+      prevBtn.addEventListener('click', () => {
+        track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+      });
 
-.valoraciones h2 {
-    color: #009b8d;
-    font-size: 28px;
-    margin-bottom: 30px;
-}
+      nextBtn.addEventListener('click', () => {
+        track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      });
+    });
+  </script>
 
-.valoracion {
-    border: 1px solid #00bfae;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 15px 0;
-    background-color: #ffffff;
-    text-align: left;
-}
-
-.valoracion .estrellas {
-    color: gold;
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-.valoracion .nombre {
-    font-weight: bold;
-    color: #009b8d;
-    margin-bottom: 5px;
-}
-
-.valoracion .texto {
-    font-style: italic;
-    color: #333333;
-}
+</body>
+</html>
