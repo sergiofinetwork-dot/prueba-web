@@ -80,7 +80,7 @@
       const nextBtn = document.querySelector('.carousel-btn.next');
       const cards = document.querySelectorAll('.valoracion');
 
-      const cardWidth = cards[0].offsetWidth + 20; // ancho + gap
+      const cardWidth = cards[0].offsetWidth + 20;
 
       prevBtn.addEventListener('click', () => {
         track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
