@@ -78,8 +78,9 @@
       const track = document.querySelector('.carousel-track');
       const prevBtn = document.querySelector('.carousel-btn.prev');
       const nextBtn = document.querySelector('.carousel-btn.next');
+      const cards = document.querySelectorAll('.valoracion');
 
-      const cardWidth = document.querySelector('.valoracion').offsetWidth + 20; // gap
+      const cardWidth = cards[0].offsetWidth + 20; // ancho + gap
 
       prevBtn.addEventListener('click', () => {
         track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
