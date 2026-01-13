@@ -1,106 +1,41 @@
-/* Fondo general de la página */
-body {
-    background-color: #ffe6f0; /* rosa agua */
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Barra de navegación */
-nav {
-    background-color: #00bfae; /* verde agua */
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Links de navegación */
-nav a {
-    color: #009b8d; /* turquesa oscuro para destacar */
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: 500;
-}
-
-nav a:hover {
-    color: #00d4c1; /* turquesa más brillante al pasar el mouse */
-}
-
-/* Botón de pedir cita */
-.btn-cita {
-    background-color: #009b8d; /* turquesa destacado */
-    color: #ffffff;
-    padding: 8px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.btn-cita:hover {
-    background-color: #00d4c1; /* cambio al pasar mouse */
-}
-
-/* Sección principal */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-}
-
-/* Texto principal */
-.hero-text {
-    max-width: 600px;
-}
-
-.hero-text h1 {
-    color: #009b8d; /* turquesa principal */
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.hero-text h2 {
-    color: #00d4c1; /* turquesa más claro para resaltar */
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.hero-text p {
-    color: #009b8d; /* turquesa */
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-/* Imagen de Ana */
-.hero img {
-    max-width: 400px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-/* ------------------ Estilo para valoraciones ------------------ */
-
-.valoraciones {
-    max-width: 800px;
+/* Carrusel de valoraciones */
+.valoraciones-carousel {
+    max-width: 900px;
     margin: 50px auto;
-    padding: 20px;
+    padding: 0 20px;
     text-align: center;
 }
 
-.valoraciones h2 {
+.valoraciones-carousel h2 {
     color: #009b8d;
     font-size: 28px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none; /* oculta scroll horizontal */
 }
 
 .valoracion {
+    min-width: 250px;
+    flex: 0 0 auto;
     border: 1px solid #00bfae;
     border-radius: 10px;
     padding: 15px;
-    margin: 15px 0;
     background-color: #ffffff;
     text-align: left;
 }
@@ -120,4 +55,32 @@ nav a:hover {
 .valoracion .texto {
     font-style: italic;
     color: #333333;
+}
+
+/* Botones del carrusel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #00bfae;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: #00d4c1;
+}
+
+.carousel-btn.prev {
+    left: -25px;
+}
+
+.carousel-btn.next {
+    right: -25px;
 }
