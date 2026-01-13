@@ -1,3 +1,5 @@
+/* ------------------ ESTILO GENERAL ------------------ */
+
 /* Fondo general de la página */
 body {
     background-color: #ffe6f0; /* rosa agua */
@@ -81,7 +83,7 @@ nav a:hover {
     object-fit: cover;
 }
 
-/* ------------------ Carrusel de valoraciones ------------------ */
+/* ------------------ CARRUSEL DE VALORACIONES ------------------ */
 
 .valoraciones-carousel {
     max-width: 900px;
@@ -98,20 +100,21 @@ nav a:hover {
 
 .carousel-container {
     position: relative;
-    display: flex;
-    align-items: center;
+}
+
+.carousel-track-wrapper {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+}
+
+.carousel-track-wrapper::-webkit-scrollbar {
+    display: none; /* oculta scroll horizontal */
 }
 
 .carousel-track {
     display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
     gap: 20px;
-    padding: 10px 0;
-}
-
-.carousel-track::-webkit-scrollbar {
-    display: none; /* oculta scroll horizontal */
 }
 
 .valoracion {
@@ -158,4 +161,13 @@ nav a:hover {
 }
 
 .carousel-btn:hover {
-    b
+    background-color: #00d4c1;
+}
+
+.carousel-btn.prev {
+    left: -25px;
+}
+
+.carousel-btn.next {
+    right: -25px;
+}
