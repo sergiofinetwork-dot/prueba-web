@@ -1,38 +1,33 @@
 /* ------------------ ESTILO GENERAL ------------------ */
-
-/* Fondo general de la página */
 body {
-    background-color: #ffe6f0; /* rosa agua */
+    background-color: #ffe6f0;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Barra de navegación */
 nav {
-    background-color: #00bfae; /* verde agua */
+    background-color: #00bfae;
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Links de navegación */
 nav a {
-    color: #009b8d; /* turquesa oscuro para destacar */
+    color: #009b8d;
     text-decoration: none;
     margin: 0 10px;
     font-weight: 500;
 }
 
 nav a:hover {
-    color: #00d4c1; /* turquesa más brillante al pasar el mouse */
+    color: #00d4c1;
 }
 
-/* Botón de pedir cita */
 .btn-cita {
-    background-color: #009b8d; /* turquesa destacado */
-    color: #ffffff;
+    background-color: #009b8d;
+    color: #fff;
     padding: 8px 20px;
     border-radius: 5px;
     border: none;
@@ -42,10 +37,9 @@ nav a:hover {
 }
 
 .btn-cita:hover {
-    background-color: #00d4c1; /* cambio al pasar mouse */
+    background-color: #00d4c1;
 }
 
-/* Sección principal */
 .hero {
     display: flex;
     align-items: center;
@@ -53,30 +47,28 @@ nav a:hover {
     padding: 50px;
 }
 
-/* Texto principal */
 .hero-text {
     max-width: 600px;
 }
 
 .hero-text h1 {
-    color: #009b8d; /* turquesa principal */
+    color: #009b8d;
     font-size: 36px;
     margin-bottom: 10px;
 }
 
 .hero-text h2 {
-    color: #00d4c1; /* turquesa más claro para resaltar */
+    color: #00d4c1;
     font-size: 28px;
     margin-bottom: 15px;
 }
 
 .hero-text p {
-    color: #009b8d; /* turquesa */
+    color: #009b8d;
     font-size: 16px;
     line-height: 1.6;
 }
 
-/* Imagen de Ana */
 .hero img {
     max-width: 400px;
     border-radius: 10px;
@@ -84,7 +76,6 @@ nav a:hover {
 }
 
 /* ------------------ CARRUSEL DE VALORACIONES ------------------ */
-
 .valoraciones-carousel {
     max-width: 900px;
     margin: 50px auto;
@@ -103,18 +94,14 @@ nav a:hover {
 }
 
 .carousel-track-wrapper {
-    overflow-x: auto;
-    scroll-behavior: smooth;
+    overflow: hidden; /* ocultamos scrollbar visible */
     padding: 10px 0;
-}
-
-.carousel-track-wrapper::-webkit-scrollbar {
-    display: none; /* oculta scroll horizontal */
 }
 
 .carousel-track {
     display: flex;
     gap: 20px;
+    transition: transform 0.3s ease;
 }
 
 .valoracion {
@@ -123,7 +110,7 @@ nav a:hover {
     border: 1px solid #00bfae;
     border-radius: 10px;
     padding: 15px;
-    background-color: #ffffff;
+    background-color: #fff;
     text-align: left;
 }
 
@@ -141,7 +128,7 @@ nav a:hover {
 
 .valoracion .texto {
     font-style: italic;
-    color: #333333;
+    color: #333;
 }
 
 /* Botones del carrusel */
@@ -165,9 +152,30 @@ nav a:hover {
 }
 
 .carousel-btn.prev {
-    left: -25px;
+    left: -40px; /* ajustado para estar fuera del carrusel */
 }
 
 .carousel-btn.next {
-    right: -25px;
+    right: -40px;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        margin-top: 20px;
+        max-width: 300px;
+    }
+
+    .carousel-btn.prev {
+        left: -20px;
+    }
+
+    .carousel-btn.next {
+        right: -20px;
+    }
 }
