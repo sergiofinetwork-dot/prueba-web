@@ -77,7 +77,7 @@ nav a:hover {
 
 /* ------------------ CARRUSEL DE VALORACIONES ------------------ */
 .valoraciones-carousel {
-    max-width: 900px;
+    max-width: 1000px; /* más ancho para que no se corte */
     margin: 50px auto;
     padding: 0 20px;
     text-align: center;
@@ -94,7 +94,7 @@ nav a:hover {
 }
 
 .carousel-track-wrapper {
-    overflow: hidden; /* ocultamos scrollbar visible */
+    overflow: hidden;
     padding: 10px 0;
 }
 
@@ -131,32 +131,27 @@ nav a:hover {
     color: #333;
 }
 
-/* Botones del carrusel */
+/* Botones del carrusel - ahora flechas simples */
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #00bfae;
-    color: white;
+    background: none;
+    color: #009b8d;
     border: none;
-    font-size: 24px;
-    padding: 10px 15px;
+    font-size: 36px;
     cursor: pointer;
-    border-radius: 50%;
     z-index: 10;
-    transition: background-color 0.3s;
-}
-
-.carousel-btn:hover {
-    background-color: #00d4c1;
+    padding: 0;
+    line-height: 1;
 }
 
 .carousel-btn.prev {
-    left: -40px; /* ajustado para estar fuera del carrusel */
+    left: -30px;
 }
 
 .carousel-btn.next {
-    right: -40px;
+    right: -30px;
 }
 
 /* Responsive */
